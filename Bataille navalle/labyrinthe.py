@@ -81,7 +81,7 @@ def Placement():
 		else :
 			Placement_Valide = True
 
-Map[Bateau]
+Map[y][x]
 
 
 
