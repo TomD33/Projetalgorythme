@@ -1,0 +1,16 @@
+if entitymov == F :
+          if Map[y2mov][x2mov] == V :
+              go(F)
+          if Map[y2mov][x2mov] == R :
+              go(F_R)
+          if Map[y2mov][x2mov] == C :
+              go(F_C)
+          if Map[y2mov][x2mov] == P :
+              if Force == P :
+                  if Map[y][x][1] == 1 :
+                      Score +=4
+                  if Map[y][x][1] == 0 :
+                      Score +=3
+                  Spawn_F()
+              if Force == F :
+                  Win= "no"

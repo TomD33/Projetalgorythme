@@ -1,0 +1,70 @@
+def Test_Mouvement(entity, x, y) :
+    if direction == "z" :
+        if y == 0 :
+            Path = 13
+        else :
+            Path = -1
+        y2 = y+Path
+        x2 = x
+    if direction == "s" :
+        if y == 13 :
+            Path = -13
+        else :
+            Path = 1
+        y2 = y+Path
+        x2 = x
+    if direction == "q" :
+        if y == 0 :
+            Path = 16
+        else :
+            Path = -1
+        y2 = y
+        x2 = x+Path
+    if direction == "d" :
+        if y == 0 :
+            Path = 16
+        else :
+            Path = 1
+        y2 = y
+        x2 = x+Path
+    if Map[y2][x2] != M
+        mouvement(entity,x,y,x2,y2)
+def Mouvement(entitymov,xmov,xmov,x2mov, y2mov) :
+    if entitymov == P :
+            if Map[y2mov][x2mov] == V :
+                go(P)
+            if Map[y2mov][x2mov] == R :
+                go(P)
+                Score += 1
+            if Map[y2mov][x2mov] == F :
+                if Force == P :
+                    if Map[y2mov][x2mov][1] == 1 :
+                        go(P)
+                        Score += 4
+                        Spawn_F()
+                    else :
+                        go(P)
+                        Score += 3
+                if Force == F :
+                    Win= "no"
+            if Map[y2mov][x2mov] == C :
+                go(C)
+                Score += 5
+def go(entitygo,xgo,xgo ,x2go , y2go ) :
+    if entitygo == P :
+        Map[x][y] = V
+        y = y2 , x = x2
+        Map[y][x] = entity
+    if entity == F :
+        if Map[x][y][1] == 1 :
+            Map[y][x] = R
+            y = y2mov , x = x2
+            Map[y][x] = entity
+        if Map[x][y][1] == 3 :
+            Map[y][x] = C
+            y = y2 , x = x2
+            Map[y][x] = entity
+        else :
+            Map[y][x] = V
+            y = y2 , x = x2
+            Map[y][x] = entity
